@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title></title>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	void main(){
+		gl_Position = vPosition;
+	}
+	</script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	void main(){
+		gl_FragColor = vec4( 1.0, 0.0, 0.0, 0.8 );
+	}
+	</script>
+
+    <script type="text/javascript" src="./base/webgl-utils.js"></script>
+    <script type="text/javascript" src="./base/initShaders.js"></script>
+    <script type="text/javascript" src="./base/gl-matrix-min.js"></script>
+
+    <script type="text/javascript" src="./js/triangles5.js"></script>
+</head>
+
+<body>
+	
+    <h2>在任务d中，如果旋转角度根据点到原点的距离$d$设定，即有$x’=x\cos(d\theta)-y\sin(d\theta)$, $y’=x\sin(d\theta)+y\cos(d\theta)$，其中，$d=\sqrt{(x^2+y^2)}$。</h2>
+	
+	层数：<input type="text" name="cengshu" id="cengshu" value="1" />
+	角度：<input type="text" name="jiaodu" id="jiaodu" value="60" />
+    <canvas id="gl-canvas" width="400" height="400"></canvas>
+
+</body>
+
+</html>

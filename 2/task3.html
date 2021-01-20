@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title></title>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	void main(){
+		gl_Position = vPosition;
+	}
+	</script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	void main(){
+		gl_FragColor = vec4( 1.0, 0.0, 0.0, 0.8 );
+	}
+	</script>
+
+    <script type="text/javascript" src="./base/webgl-utils.js"></script>
+    <script type="text/javascript" src="./base/initShaders.js"></script>
+    <script type="text/javascript" src="./base/gl-matrix-min.js"></script>
+
+    <script type="text/javascript" src="./js/triangles3.js"></script>
+</head>
+
+<body>
+	
+    <h2>完成不同层次剖分效果的绘制，这里的绘制采用线框模式，可以同任务a及任务b集成在同一个界面中</h2>
+
+	层数：<input type="text" name="cengshu" id="cengshu" value="1" />
+    <canvas id="gl-canvas" width="400" height="400"></canvas>
+</body>
+
+</html>

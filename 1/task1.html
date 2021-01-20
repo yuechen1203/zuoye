@@ -1,0 +1,32 @@
+	
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>实验1</title>
+    <!-- ������ɫ����ƬԪ��ɫ������ -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+      attribute vec4 vPosition;
+      void main(){
+        gl_Position = vPosition;
+      }
+    </script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+      precision mediump float;
+      void main(){
+        gl_FragColor = vec4( 0.0, 0.0, 1.0, 1.0 );
+      }
+    </script>
+    <!-- һ����ص�JS�� -->
+    <script type="text/javascript" src="./base/webgl-utils.js"></script>
+    <script type="text/javascript" src="./base/initShaders.js"></script>
+    <script type="text/javascript" src="./base/glMatrix-0.9.5.min.js"></script>
+    <!-- ���������ε�JS���� -->
+    <script type="text/javascript" src="./js/triangle1.js"></script>
+  </head>
+  <body>
+  <h1>实验1.a</h1>
+  <h3>修改三角形的显示颜色，比如改成蓝色或绿色</h3>
+    <canvas id="triangle-canvas" style="border:none;" width="500" height="500"></canvas>
+  </body>
+</html>

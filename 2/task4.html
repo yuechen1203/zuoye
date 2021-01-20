@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title></title>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+	attribute vec4 vPosition;
+	void main(){
+		gl_Position = vPosition;
+	}
+	</script>
+
+    <script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	void main(){
+		gl_FragColor = vec4( 1.0, 0.0, 0.0, 0.8 );
+	}
+	</script>
+
+    <script type="text/javascript" src="./base/webgl-utils.js"></script>
+    <script type="text/javascript" src="./base/initShaders.js"></script>
+    <script type="text/javascript" src="./base/gl-matrix-min.js"></script>
+
+    <script type="text/javascript" src="./js/triangles4.js"></script>
+</head>
+
+<body>
+	
+    <h2>Sierpinski Gasket in 2D 任务c中剖分后的三角形添加旋转效果。假设没有旋转时，图中绘制的各个点的坐标分别为$(x,y,z)$，因只涉及二维平面，故有$z=0$。当图案在$xoy$平面上绕原点旋转
+	时，即绕\(z\)轴逆时针旋转角度$\theta$时，新的坐标$(x’,y’,z’)$为$x’=x\cos(\theta)-y\sin(\theta)$, $y’=x\sin(\theta)+y\cos(\theta)$。</h2>
+	
+	层数：<input type="text" name="cengshu" id="cengshu" value="1" />
+	度数：<input type="text" name="jiaodu" id="jiaodu" value="60" />
+    <canvas id="gl-canvas" width="400" height="400"></canvas>
+
+</body>
+
+</html>

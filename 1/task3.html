@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>实验1</title>
+    <!-- ������ɫ����ƬԪ��ɫ������ -->
+    <script id="vertex-shader" type="x-shader/x-vertex">
+      attribute vec4 vPosition;
+      void main(){
+        gl_Position = vPosition;
+      }
+    </script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+      precision mediump float;
+      void main(){
+        gl_FragColor = vec4( 0.0, 0.0, 0.0, 1.0 );
+      }
+    </script>
+    <!-- һ����ص�JS�� -->
+    <script type="text/javascript" src="./base/webgl-utils.js"></script>
+    <script type="text/javascript" src="./base/initShaders.js"></script>
+    <script type="text/javascript" src="./base/glMatrix-0.9.5.min.js"></script>
+    <!-- �����ı��ε�JS���� -->
+    <script type="text/javascript" src="./js/triangle3.js"></script>
+  </head>
+  <body>
+  <h1>实验1.c</h1>
+  <h3>同时绘制一个三角形和一个四边形，将两者设置为相同的颜色，要求同上</h3>
+    <canvas id="triangle-canvas" style="border:none;" width="400" height="400"></canvas>
+  </body>
+</html>
